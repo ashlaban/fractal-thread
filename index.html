@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-2.1.1.min.js"></script>
+<script src="knockout-3.2.0.min.js"></script>
+<script src="fracth-client.js"></script>
+</head>
+<body>
+
+<div>
+	<canvas id="fracth-canvas"></canvas>
+	<div><label>x: </label><input id="x"            name="x"            value="-0.75" type="text" /></div>
+	<div><label>y: </label><input id="y"            name="y"            value=" 0.10" type="text" /></div>
+	<div><label>w: </label><input id="pixel_width"  name="pixel_width"  value="512"  type="text" /></div>
+	<div><label>h: </label><input id="pixel_height" name="pixel_height" value="512"  type="text" /></div>
+	<div><label>z: </label><input id="zoom"         name="zoom"         value="1"    type="range" min="0" max="100" /></div>
+	<div><label>iterations: </label><input id="max-iter" name="max-iter" value="100" type="number" min="0" max="1000"/></div>
+	<div><label>sample points: </label><input id="num-sample-points" name="num-sample-points" value="1" type="number" min="0" max="1000"/></div>
+	<button onclick="getImage();">Render</button>
+</div>
+
+
+</body>
+</html>
