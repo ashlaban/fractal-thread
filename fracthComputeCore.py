@@ -2,12 +2,13 @@ import math
 import random
 import numbers
 import json
-from PIL import Image
+import time
+# from PIL import Image
 import cProfile
 
-import threading
+import f3c
 
-def mandelbrot(c, max_iter):
+def mandelbrot(c, max_iter, api):
 	if  isinstance(c, numbers.Number) \
 	and isinstance(max_iter, numbers.Number):
 
@@ -17,7 +18,10 @@ def mandelbrot(c, max_iter):
 		if ( ((c.real + 1)**2 + c.imag**2) < (1.0/16) ):
 			return 0.0
 
-		return __mandelbrot_internal(c, max_iter)
+		if api == "python":
+			return __mandelbrot_internal(c, max_iter)
+		if api == "c":
+			return f3c.mandelbrot(c, max_iter)
 	else:
 		return None
 
@@ -27,7 +31,6 @@ def __mandelbrot_internal(c, max_iter):
 		z = z*z + c
 		if (z.real >= 2.0 or z.imag >= 2.0):
 			return 1.0 - float(i)/max_iter
-
 	return 0.0
 
 class ColorPalette(object):
@@ -58,6 +61,8 @@ class RenderSettings(object):
 		self.num_sample_points = 1
 
 		self.data = None
+
+		self.api = "c"
 
 	def subdivide(self, n_levels):
 		if n_levels < 1:
@@ -172,11 +177,13 @@ def random_sample_pixel( x, y, render_settings ):
 		dy = random.random()*pph*1
 		z = complex( vp[0]+dx, vp[1]+dy )
 		# print vp, (vp[0]+dx, vp[1]+dy)
-		val += mandelbrot( z, max_iter )
+		val += mandelbrot( z, max_iter, render_settings.api )
 
 	return val / render_settings.num_sample_points
 
 def render_region( render_settings ):
+	time_start = time.clock()
+
 	width  = render_settings.width
 	height = render_settings.height
 	pixel_width  = render_settings.pixel_width
@@ -197,6 +204,10 @@ def render_region( render_settings ):
 			data[x + y*render_settings.pixel_width] = color
 
 	render_settings.data = data
+
+	time_end = time.clock()
+	print "Rendered region in :" + str(time_end-time_start)
+
 	return render_settings
 
 def write_region(region_settings, direction):
@@ -216,18 +227,25 @@ def write_region(region_settings, direction):
 		im.save("out/" + direction + ".png")
 		print "Done: " + direction
 
-# p = 10
-# render_settings = RenderSettings()
-# render_settings.x            = -1.0
-# render_settings.y            = 0.0
-# render_settings.width        = 3.0
-# render_settings.height       = 3.0
-# render_settings.zoom         = 1.0
-# render_settings.pixel_width  = pow(2,p)
-# render_settings.pixel_height = pow(2,p)
-# render_settings.max_iter     = 100
 
-#data = render_region( render_settings )
+if __name__ == "__main__":
+	p = 9
+	render_settings = RenderSettings()
+	render_settings.x            = -0.75
+	render_settings.y            = 0.10
+	render_settings.width        = 2.0
+	render_settings.height       = 2.0
+	render_settings.zoom         = 1.0
+	render_settings.pixel_width  = pow(2,p)
+	render_settings.pixel_height = pow(2,p)
+	render_settings.max_iter     = 1000
+
+	def profile_test(api):
+		render_settings.api          = api
+		data = render_region( render_settings )
+
+	cProfile.run('profile_test("python")')
+	cProfile.run('profile_test("c")')
 
 # subregions = render_settings.subdivide(0)
 # write_region(subregions, "Base")

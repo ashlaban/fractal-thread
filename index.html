@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="jquery-2.1.1.min.js"></script>
-<script src="knockout-3.2.0.min.js"></script>
+
+<script src="lib/js/jquery-2.1.1.min.js"></script>
+<script src="lib/js/knockout-3.2.0.min.js"></script>
+<script src="lib/js/bootstrap-min.js"></script>
 <script src="fracth-client.js"></script>
+
+<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="fracth-client.css">
+
 </head>
 <body>
+	<!-- ==========      HEADER       ========== -->
+	<div id="header"></div>
 
-<div>
-	<canvas id="fracth-canvas"></canvas>
-	<div><label>x: </label><input id="x"            name="x"            value="-0.75" type="text" /></div>
-	<div><label>y: </label><input id="y"            name="y"            value=" 0.10" type="text" /></div>
-	<div><label>w: </label><input id="pixel_width"  name="pixel_width"  value="512"  type="text" /></div>
-	<div><label>h: </label><input id="pixel_height" name="pixel_height" value="512"  type="text" /></div>
-	<div><label>z: </label><input id="zoom"         name="zoom"         value="1"    type="range" min="0" max="100" /></div>
-	<div><label>iterations: </label><input id="max-iter" name="max-iter" value="100" type="number" min="0" max="1000"/></div>
-	<div><label>sample points: </label><input id="num-sample-points" name="num-sample-points" value="1" type="number" min="0" max="1000"/></div>
-	<button onclick="getImage();">Render</button>
-</div>
+	<div id="content-wrapper">
+	<div id="content">
+	<!-- ==========      CANVAS       ========== -->
+		<canvas id="fracth-canvas"></canvas>
+	<!-- ==========    TEXT SECTION   ========== -->
+		<div id="text-section">
+			<h1>Readme</h1>
+			<p>Try pressing <kbd>esc</kbd>!</p>
+			<p>Here is a lorem ipsum test column where I strive to encapsulte the inner most demon of the html beast. Where I to be lucky there would be celbration and cerebral cereal for all to be had. But alas there shall be no foresooth before the respite is finished and despite how you despise me i shall survive.</p>
+		</div>
+	</div>
+	</div>
 
+	<!-- ==========      FOOTER       ========== -->
+	<div id="footer"></div>
+
+	<!-- ==========      CONTROL      ========== -->
+	<div id="control-wrapper">
+	<div id="control" hidden="true">
+		<p>Control Panel</p>
+		<div class="input-group">
+			<span  class="input-group-addon">x</span>
+			<input class="form-control" id="x" name="x" value="-0.75" type="text" />
+		</div>
+		<div class="input-group">
+			<span  class="input-group-addon">y</span>
+			<input class="form-control" id="y" name="y" value="0.10" type="text" />
+		</div>
+		<div class="input-group">
+			<span  class="input-group-addon">w</span>
+			<input class="form-control" id="pixel_width" name="pixel_width" value="512" type="text" />
+		</div>
+		<div class="input-group">
+			<span  class="input-group-addon">h</span>
+			<input class="form-control" id="pixel_height" name="pixel_height" value="512" type="text" />
+		</div>
+		<div class="input-group">
+			<span  class="input-group-addon">z</span>
+			<input class="form-control" id="zoom" name="zoom" value="1" type="text" />
+		</div>
+		<div class="input-group">
+			<span  class="input-group-addon">iter</span>
+			<input class="form-control" id="max-iter" name="max-iter" value="100" type="number" min="0" max="1000" />
+		</div>
+		<div class="input-group">
+			<span  class="input-group-addon">samp</span>
+			<input class="form-control" id="num-sample-points" name="num-sample-points" value="1" type="number" min="0" max="1000" />
+		</div>
+		<div class="input-group">
+			<span  class="input-group-addon">api</span>
+			<select class="form-control" id="api" name="api" value="c" type="select">
+				<option>c</option>
+				<option>python</option>
+			</select>
+
+		</div>
+		<button type="button" class="btn" onclick="getImage();">Render</button>
+	</div>
+	</div>
 
 </body>
 </html>

@@ -27,6 +27,8 @@ class myHandler(BaseHTTPRequestHandler):
 			self.send_header('Content-type','text/html')
 		if path.endswith('.js'):
 			self.send_header('Content-type','application/javascript')
+		if path.endswith('.css'):
+			self.send_header('Content-type','text/css')
 		self.end_headers()
 		f = open("."+path)
 		self.wfile.write(f.read())
@@ -63,7 +65,8 @@ class myHandler(BaseHTTPRequestHandler):
 			self.get_compute_server()
 
 		if (   self.path.endswith(".html") \
-		or     self.path.endswith(".js"  ) ):
+		or     self.path.endswith(".js"  ) \
+		or     self.path.endswith(".css" ) ):
 			if (".." in self.path): return
 			self.get_file(self.path)
 	# End GET handler
@@ -96,6 +99,7 @@ class myHandler(BaseHTTPRequestHandler):
 		# render_settings.c        = float(post_data["c"][0])
 
 		render_settings.num_sample_points = int(post_data["num_sample_points"][0])
+		render_settings.api = post_data["api"][0]
 		render_settings.data = None
 
 		# TODO: Keep track of job identifiers

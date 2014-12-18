@@ -1,0 +1,86 @@
+#header, #footer
+{
+	background: #E8D0A9;
+
+	height: 45px;
+	width : 100%;
+}
+
+#content-wrapper
+{
+	background: #B7AFA3;
+
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#content
+{
+	background: #6D929B;
+
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#fracth-canvas
+{
+	padding: 10px;	
+}
+
+#text-section
+{
+	max-width: 450px;
+	padding: 10px;
+}
+
+#control-wrapper
+{
+	display : flex;
+	position: fixed;
+	justify-content: center;
+	align-items    : center;
+
+	top   : 0;
+	left  : 0;
+	bottom: 0;
+	right : 0;
+}
+
+#control
+{
+	border-radius: 1em;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #F5FAFA;
+	background: #ACD1E9;
+
+	width : 250px;
+
+	padding: 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#control div
+{
+	padding-top: 2px;
+}
+
+#control .input-group
+{
+	width: 100%;
+}
+
+#control .input-group-addon
+{
+	width: 75px;
+}
+
+#control .btn
+{
+	margin: 25px;
+}
