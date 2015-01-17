@@ -87,18 +87,20 @@ var canvasRender = new CanvasRenderer();
 
 $(window).bind('mousemove', function(event)
 {
+	// TODO: Implement mouse move similar to control panel as well?
+
 	var canvas = $('#fracth-canvas');
 	var ex = event.pageX;
 	var ey = event.pageY;
 	var cx = canvas.offset().left;
 	var cy = canvas.offset().top;
 
-	var insideCanvas =  ex > cx
-	                 && ey > cy
-	                 && ex < cx+canvas.width()
-	                 && ey < cy+canvas.height();
+	// var insideCanvas =  ex > cx
+	//                  && ey > cy
+	//                  && ex < cx+canvas.width()
+	//                  && ey < cy+canvas.height();
 
-	if (insideCanvas && $(event.target).is('#control-wrapper'))
+	if ( $(event.target).is(canvas) )
 	{
 		var zoom = parseFloat(document.getElementById('zoom').value);
 
@@ -120,12 +122,12 @@ $(window).bind('mousewheel', function(event)
 	var cx = canvas.offset().left;
 	var cy = canvas.offset().top;
 
-	var insideCanvas =  ex > cx
-	                 && ey > cy
-	                 && ex < cx+canvas.width()
-	                 && ey < cy+canvas.height();
+	// var insideCanvas =  ex > cx
+	//                  && ey > cy
+	//                  && ex < cx+canvas.width()
+	//                  && ey < cy+canvas.height();
 
-	if (insideCanvas && $(event.target).is('#control-wrapper'))
+	if ( $(event.target).is(canvas) )
 	{
 		event.preventDefault();
 		var zoom   = parseFloat(document.getElementById('zoom').value);
