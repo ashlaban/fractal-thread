@@ -1,3 +1,9 @@
+html, body
+{
+	height: 100%;
+	min-height: 100%;
+}
+
 #header, #footer
 {
 	background: #E8D0A9;
@@ -10,6 +16,9 @@
 {
 	background: #B7AFA3;
 
+	height: 0px; /* Specifying the height explicitly allows children to use height: 100%; #stupid-css */
+	min-height: calc(100% - 45px * 2);
+
 	display : flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,6 +27,8 @@
 #content
 {
 	background: #6D929B;
+
+	min-height: 100%;
 
 	display : flex;
 	flex-direction: column;
@@ -35,28 +46,20 @@
 	padding: 10px;
 }
 
-#control-wrapper
-{
-	display : flex;
-	position: fixed;
-	justify-content: center;
-	align-items    : center;
-
-	top   : 0;
-	left  : 0;
-	bottom: 0;
-	right : 0;
-}
-
 #control
 {
+	position: fixed;
+	top   : 0;
+	left  : 0;
+
 	border-radius: 1em;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #F5FAFA;
 	background: #ACD1E9;
 
-	width : 250px;
+	width  : 250px;
+	/*height : 500px;*/
 
 	padding: 10px;
 
