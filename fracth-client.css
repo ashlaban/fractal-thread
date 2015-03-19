@@ -16,7 +16,8 @@ html, body
 {
 	background: #B7AFA3;
 
-	height: 0px; /* Specifying the height explicitly allows children to use height: 100%; #stupid-css */
+	/* Specifying the height explicitly allows children to use height: 100%; #stupid-css */
+	/*height: 0px; */ /* Not working........... Or, only working partly.*/
 	min-height: calc(100% - 45px * 2);
 
 	display : flex;
@@ -27,8 +28,6 @@ html, body
 #content
 {
 	background: #6D929B;
-
-	min-height: 100%;
 
 	display : flex;
 	flex-direction: column;

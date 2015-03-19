@@ -72,61 +72,36 @@ class myHandler(BaseHTTPRequestHandler):
 	# End GET handler
 	
 	def do_POST(self):
-		if (TRACE): print "ENTER::myHandler::do_POST"
-		print "POST received."
+		if (TRACE): print "%-20s :: %s" % ("ENTER", sys._getframe().f_code.co_name)
 
 		# Get POST data
-		print "Getting POST data."
+		if (TRACE): print "%-20s :: %s" % ("GET DATA", sys._getframe().f_code.co_name)
 		post_content_length = int(self.headers.getheader('Content-Length'))
 		post_query = self.rfile.read( post_content_length )
-		post_data  = urlparse.parse_qs( post_query )
+		render_settings_json = json.loads(post_query)
+		# post_data  = urlparse.parse_qs( post_query )
 
 		# Construct a render job
-		print "Parsing POST data and building job."
-		render_settings = fcc.RenderSettings()
-		render_settings.x      = float(post_data["x"][0])
-		render_settings.y      = float(post_data["y"][0])
-		render_settings.width  = float(post_data["width"][0])
-		render_settings.height = float(post_data["height"][0])
-
-		render_settings.pixel_x      = int(post_data["pixel_x"][0])
-		render_settings.pixel_y      = int(post_data["pixel_y"][0])
-		render_settings.pixel_width  = int(post_data["pixel_width"][0])
-		render_settings.pixel_height = int(post_data["pixel_height"][0])
-
-		render_settings.zoom     = float(post_data["zoom"][0])
-		render_settings.max_iter = int(post_data["max_iter"][0])
-		# render_settings.c        = float(post_data["c"][0])
-
-		render_settings.num_sample_points = int(post_data["num_sample_points"][0])
-		render_settings.api = post_data["api"][0]
-		render_settings.data = None
+		if (TRACE): print "%-20s :: %s" % ("PARSING DATA", sys._getframe().f_code.co_name)
+		render_settings = fcc.RenderSettings(json_data=render_settings_json)
 
 		# TODO: Keep track of job identifiers
-		print "Sending job to compute farm."
+		if (TRACE): print "%-20s :: %s" % ("QUEUE JOB", sys._getframe().f_code.co_name)
 		job = render_settings
 		computeClient.put_job( job )
 
-		print "Obtaining result."
+		if (TRACE): print "%-20s :: %s" % ("OBTAIN RESULT", sys._getframe().f_code.co_name)
 		result = computeClient.get_result()
 		json_friendly_result = result.__dict__
 
-		# Format output
-		# output = {}
-		# output["pixel_x"] = str(render_settings.pixel_x)
-		# output["pixel_y"] = str(render_settings.pixel_y)
-		# output["pixel_width"]  = str(render_settings.pixel_width)
-		# output["pixel_height"] = str(render_settings.pixel_height)
-		# output["data"] = result
-
 		# Send to client
-		print "Writing to client."
+		if (TRACE): print "%-20s :: %s" % ("SEND", sys._getframe().f_code.co_name)
 		self.send_response(200)
 		self.send_header('Content-type','application/json')
 		self.end_headers()
 		self.wfile.write( json.dumps(json_friendly_result) )
 		
-		if (TRACE): print "EXIT::myHandler::do_POST"
+		if (TRACE): print "%-20s :: %s" % ("EXIT", sys._getframe().f_code.co_name)
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     """Handle requests in a separate thread."""

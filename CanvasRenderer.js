@@ -25,11 +25,14 @@ CanvasRenderer = function()
 		var c = $('#fracth-canvas')[0];
 		w = this.render_settings.pixel_width;
 		h = this.render_settings.pixel_width * this.render_settings.aspect_ratio;
-		c.width = 1; // FIX ME: This is currently required to update the size of the canvas if only height changes.
-		c.width  = w;
-		c.height = h;
-		c.style.width  = w;
-		c.style.height = h;
+		if (c.width != w || c.height != h)
+		{
+			c.width = 1; // FIX ME: This is currently required to update the size of the canvas if only height changes.
+			c.width  = w;
+			c.height = h;
+			c.style.width  = w;
+			c.style.height = h;
+		}
 
 		// TODO: Specify square width
 		var n = Math.log2(this.render_settings.pixel_width) - 8;
@@ -64,11 +67,16 @@ CanvasRenderer = function()
 		ctx.putImageData(imageData, x, y);
 	}
 
-	this.render = $.debounce(function()
+	this.render = $.debounce(function( old_zoom )
 	{
 		this.x = parseFloat(document.getElementById('x').value);
 		this.y = parseFloat(document.getElementById('y').value);
 		this.zoom = parseFloat(document.getElementById('zoom').value);
+
+		var canvas  = $('#fracth-canvas')[0];
+		var context = canvas.getContext('2d');
+		context.setTransform( zoom, 1, 0, 1, zoom, 0 );
+
 		this.getImage();
 	}, 250);
 
@@ -130,7 +138,8 @@ $(window).bind('mousewheel', function(event)
 	if ( $(event.target).is(canvas) )
 	{
 		event.preventDefault();
-		var zoom   = parseFloat(document.getElementById('zoom').value);
+		var zoom     = parseFloat(document.getElementById('zoom').value);
+		var old_zoom = zoom;
 
 		console.log(canvasRender.zoom)
 		// zoom += event.originalEvent.deltaY / 10;
@@ -152,6 +161,6 @@ $(window).bind('mousewheel', function(event)
 		}
 
 		document.getElementById('zoom').value = zoom;
-		canvasRender.render();
+		canvasRender.render(old_zoom);
 	}
 });

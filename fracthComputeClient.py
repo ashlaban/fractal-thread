@@ -35,7 +35,7 @@ if __name__ == "__main__":
 		print "Waiting for job...",
 		job = computeClient.get_job()
 		print "\t...done."
-		
+
 		print "Rendering...",
 		result = fcc.render_region( job )
 		print "\t...done."
