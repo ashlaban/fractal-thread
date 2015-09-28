@@ -1,0 +1,231 @@
+Started httpserver on port  8080
+Starting server, use <Ctrl-C> to stop
+/
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56602)>
+Get request received
+/lib/js/jquery-2.1.1.min.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56605)>
+Get request received
+/lib/js/jquery.debounce-1.0.5.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56606)>
+Get request received
+/lib/js/knockout-3.2.0.min.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56608)>
+Get request received
+/lib/css/bootstrap.min.css
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56611)>
+Get request received
+/lib/js/bootstrap-min.js
+<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56615)>
+Get request received
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56615)
+/fracth-client.css
+<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56613)>
+Get request received
+----------------------------------------
+/RenderSettings.js
+<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56617)>
+Get request received
+/fracth-client.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56618)>
+Get request received
+/CanvasRenderer.js
+<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56620)>
+Get request received
+/favicon.ico
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56622)>
+/computeserver
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56624)>
+/computeserver
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56627)>
+/
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56632)>
+Get request received
+/lib/js/jquery-2.1.1.min.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56634)>
+Get request received
+/lib/js/jquery.debounce-1.0.5.js
+<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56637)>
+Get request received
+/lib/js/knockout-3.2.0.min.js
+<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56638)>
+Get request received
+/lib/css/bootstrap.min.css
+<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56641)>
+Get request received
+/lib/js/bootstrap-min.js
+<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56642)>
+Get request received
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56642)
+----------------------------------------
+/fracth-client.css
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56644)>
+Get request received
+/RenderSettings.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56646)>
+Get request received
+/fracth-client.js
+<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56648)>
+Get request received
+/CanvasRenderer.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56650)>
+Get request received
+/favicon.ico
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56652)>
+/computeserver
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56654)>
+/computeserver
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56657)>
+/favicon.ico
+<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56663)>
+/favicon.ico
+<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56664)>
+/favicon.ico
+<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56665)>
+/favicon.ico
+<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56666)>
+/favicon.ico
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56667)>
+/favicon.ico
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56669)>
+/favicon.ico
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56671)>
+/favicon.ico
+<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56677)>
+/favicon.ico
+<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56678)>
+/favicon.ico
+<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56679)>
+/favicon.ico
+<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56680)>
+/favicon.ico
+<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56681)>
+/favicon.ico
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56683)>
+/
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56685)>
+Get request received
+/lib/js/jquery-2.1.1.min.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56687)>
+Get request received
+/lib/js/jquery.debounce-1.0.5.js
+<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56689)>
+Get request received
+/lib/js/knockout-3.2.0.min.js
+<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56691)>
+Get request received
+/lib/js/bootstrap-min.js
+<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketType.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 56693)>
+Get request received
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56693)
+/lib/css/bootstrap.min.css127.0.0.1 - - [28/Sep/2015 13:57:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /lib/js/jquery-2.1.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /lib/js/jquery.debounce-1.0.5.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /lib/js/knockout-3.2.0.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /lib/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /lib/js/bootstrap-min.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 613, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 344, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 669, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 398, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 386, in handle_one_request
+    method()
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /fracth-client.css HTTP/1.1" 200 -
+  File "../backend/fracthWebServer.py", line 72, in do_GET
+    self.get_file(self.path)
+  File "../backend/fracthWebServer.py", line 31, in get_file
+    f = open("."+path)
+FileNotFoundError: [Errno 2] No such file or directory: './lib/js/bootstrap-min.js'
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /RenderSettings.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /fracth-client.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:57:27] "GET /CanvasRenderer.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /lib/js/jquery-2.1.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /lib/js/jquery.debounce-1.0.5.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /lib/js/knockout-3.2.0.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /lib/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /lib/js/bootstrap-min.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 613, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 344, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 669, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 398, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 386, in handle_one_request
+    method()
+  File "../backend/fracthWebServer.py", line 72, in do_GET
+    self.get_file(self.path)
+  File "../backend/fracthWebServer.py", line 31, in get_file
+    f = open("."+path)
+FileNotFoundError: [Errno 2] No such file or directory: './lib/js/bootstrap-min.js'
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /fracth-client.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /RenderSettings.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /fracth-client.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 13:59:48] "GET /CanvasRenderer.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /lib/js/jquery-2.1.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /lib/js/jquery.debounce-1.0.5.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /lib/js/knockout-3.2.0.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /lib/js/bootstrap-min.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 613, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 344, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 669, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 398, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 386, in handle_one_request
+    method()
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /lib/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /fracth-client.css HTTP/1.1" 200 -
+  File "../backend/fracthWebServer.py", line 72, in do_GET
+    self.get_file(self.path)
+  File "../backend/fracthWebServer.py", line 31, in get_file
+    f = open("."+path)
+FileNotFoundError: [Errno 2] No such file or directory: './lib/js/bootstrap-min.js'
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /RenderSettings.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /fracth-client.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:01:47] "GET /CanvasRenderer.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /lib/js/jquery-2.1.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /lib/js/jquery.debounce-1.0.5.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /lib/js/knockout-3.2.0.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /lib/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /lib/js/bootstrap-min.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 613, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 344, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py", line 669, in __init__
+    self.handle()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 398, in handle
+    self.handle_one_request()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/http/server.py", line 386, in handle_one_request
+    method()
+  File "../backend/fracthWebServer.py", line 72, in do_GET
+    self.get_file(self.path)
+  File "../backend/fracthWebServer.py", line 31, in get_file
+    f = open("."+path)
+FileNotFoundError: [Errno 2] No such file or directory: './lib/js/bootstrap-min.js'
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /fracth-client.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /RenderSettings.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /fracth-client.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:05:52] "GET /CanvasRenderer.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:06:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:06:37] "GET /lib/js/jquery-2.1.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:06:37] "GET /lib/js/jquery.debounce-1.0.5.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2015 14:06:37] "GET /lib/js/knockout-3.2.0.min.js HTTP/1.1" 200 -

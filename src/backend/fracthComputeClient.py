@@ -7,7 +7,7 @@ class QueueManagerClient(BaseManager):
 
 class ComputeClient():
 	def __init__(self, address, authkey):
-		self.manager = QueueManagerClient(address, authkey)
+		self.manager = QueueManagerClient(address=address, authkey=bytes(authkey, 'utf-8'))
 		self.manager.register("get_job_queue")
 		self.manager.register("get_result_queue")
 		self.manager.connect()
@@ -27,20 +27,20 @@ class ComputeClient():
 		self.result_queue.put(result)
 
 if __name__ == "__main__":
-	print "Starting FRACTH compute client...",
+	print("Starting FRACTH compute client...", end=' ')
 	computeClient = ComputeClient( address=('', 50000), authkey='abracadabra' )
-	print "\t...done."
+	print("\t...done.")
 
 	while (True):
-		print "Waiting for job...",
+		print("Waiting for job...", end=' ')
 		job = computeClient.get_job()
-		print "\t...done."
+		print("\t...done.")
 
-		print "Rendering...",
+		print("Rendering...", end=' ')
 		result = fcc.render_region( job )
-		print "\t...done."
+		print("\t...done.")
 		
-		print "Commit result...",
+		print("Commit result...", end=' ')
 		computeClient.put_result( result )
-		print "\t...done."
+		print("\t...done.")
 		# done = True

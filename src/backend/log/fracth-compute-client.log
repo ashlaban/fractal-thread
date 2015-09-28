@@ -1,0 +1,16 @@
+Starting FRACTH compute client... 	...done.
+Waiting for job... Traceback (most recent call last):
+  File "fracthComputeClient.py", line 36, in <module>
+    job = computeClient.get_job()
+  File "fracthComputeClient.py", line 18, in get_job
+    return self.job_queue.get()
+  File "<string>", line 2, in get
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/multiprocessing/managers.py", line 732, in _callmethod
+    kind, result = conn.recv()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/multiprocessing/connection.py", line 416, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4/multiprocessing/connection.py", line 389, in _recv
+    raise EOFError
+EOFError

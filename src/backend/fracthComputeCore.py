@@ -42,7 +42,7 @@ def __mandelbrot_internal(cList, max_iter):
 
 		# True calculation
 		z = julia_factor*c
-		for i in xrange(1, max_iter+1):
+		for i in range(1, max_iter+1):
 			z = z*z + mandelbrot_factor*c + julia_factor*julia_constant
 			if (z.real >= 2.0 or z.imag >= 2.0 or i==max_iter):
 				break
@@ -58,7 +58,7 @@ class ColorPalette(object):
 	def __init__(self):
 		n = 2
 		# self.color  = [i for i in xrange(0, 256, n)] + [255 + i*256 for i in xrange(0, 256, n)] + [255*256 + i*256*256 for i in xrange(0, 256, n)]
-		self.color = [ i+j*256+k*256*256 for k in xrange(0, 256, n) for j in xrange(0, 256, n) for i in xrange(0, 256, n) ]
+		self.color = [ i+j*256+k*256*256 for k in range(0, 256, n) for j in range(0, 256, n) for i in range(0, 256, n) ]
 		self.length = len(self.color)
 
 	def getColorForValue(self, val):
@@ -197,7 +197,7 @@ def sample_pixel( x, y, render_settings ):
 		val /= 5
 
 	else:
-		print "Sampling scheme not implemented."
+		print("Sampling scheme not implemented.")
 
 	return val
 
@@ -215,7 +215,7 @@ def random_sample_pixel( x, y, render_settings ):
 
 	val = 0.0
 	zList = [None]*render_settings.num_sample_points
-	for i in xrange(render_settings.num_sample_points):
+	for i in range(render_settings.num_sample_points):
 		dx = ppw*(random.random()-0.5)
 		dy = pph*(random.random()-0.5)
 		zList[i] = complex( dx, dy ) + vp
@@ -234,8 +234,8 @@ def render_region( render_settings ):
 	color_palette = ColorPalette()
 	data = [None]*pixel_width*pixel_height
 	
-	for y in xrange(pixel_height):
-		for x in xrange(pixel_width):
+	for y in range(pixel_height):
+		for x in range(pixel_width):
 			val = random_sample_pixel(x, y, render_settings)
 			color = color_palette.getColorForValue(val)
 			data[x + y*render_settings.pixel_width] = color
@@ -243,7 +243,7 @@ def render_region( render_settings ):
 	render_settings.data = data
 
 	time_end = time.clock()
-	print "Rendered region in :" + str(time_end-time_start)
+	print("Rendered region in: " + str(time_end-time_start))
 
 	return render_settings
 
@@ -269,19 +269,19 @@ def write_region(region_settings, direction):
 		im = Image.new("RGB", (region_settings.pixel_width, region_settings.pixel_height), "white")
 		im.putdata(data)
 		im.save("out/" + direction + ".png")
-		print "Done: " + direction
+		print("Done: " + direction)
 
 
 if __name__ == "__main__":
-	p = 9
+	p = 11
 	render_settings = RenderSettings()
 	render_settings.x            = 0
 	render_settings.y            = 0
 	render_settings.zoom         = 0.25
 	render_settings.aspect_ratio = 1.0
 	render_settings.pixel_width  = pow(2,p)
-	render_settings.max_iter     = 100
-	render_settings.num_sample_points = 1
+	render_settings.max_iter     = 10000
+	render_settings.num_sample_points = 20
 
 	def profile_test(api):
 		render_settings.api = api
@@ -297,7 +297,7 @@ if __name__ == "__main__":
 
 	# cProfile.run('profile_test("python")')
 	# cProfile.run('profile_test("c")')
-	profile_test("python")
+	profile_test("c")
 	# subdivision_test("c")
 	
 	# z0 = complex( 0.75, -0.75 );

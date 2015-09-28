@@ -102,6 +102,7 @@ RenderSettings.prototype.subdivide = function(n)
 	}
 };
 
+// TODO: Get default value from server instead.
 RenderSettings.prototype.default = function()
 {
 	this.name = "Base"
@@ -126,18 +127,28 @@ RenderSettings.prototype.default = function()
 };
 
 RenderSettings.prototype.render = function()
+{
+	console.log(this);
+	var self = this;
+	var callback = function (data) {self.render2(data);}
+
+	$.get( "/computeserver", "", callback );
+};
+
+RenderSettings.prototype.render2 = function(compute_server_address)
+{
+	var callback = this.callback;
+	console.log(this);
+	if (this.sub_regions.length <= 0)
 	{
-		var callback = this.callback;
-		if (this.sub_regions.length <= 0)
+		$.post( compute_server_address, this.tojson(), callback );
+	}
+	else
+	{
+		for (var i = 0; i < this.sub_regions.length; i++)
 		{
-			$.post( "", this.tojson(), callback );
+			var region = this.sub_regions[i];
+			region.render();
 		}
-		else
-		{
-			for (var i = 0; i < this.sub_regions.length; i++)
-			{
-				var region = this.sub_regions[i];
-				region.render();
-			}
-		}
-	};
+	}
+};
