@@ -6,7 +6,7 @@ PYTHON_INC_CC=-I/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Ve
 PYTHON_INC_LD=-L/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/
 PYTHON_INC_LD+=-L$(OUT_DIR)
 PYTHON_CC_FLAGS=-O2 -shared -fPIC
-PYTHON_LD_FLAGS=-lpython3.4 -lf3c-core
+PYTHON_LD_FLAGS=-lpython3.4 -lf3c
 
 INC_CC= 
 INC_CC+=-Ic/
@@ -25,7 +25,8 @@ f3c.so: LIB_F3C_CORE
 AVX: $(OUT_DIR)/libf3c-avx.o
 SSE: $(OUT_DIR)/libf3c-sse.o
 NO_EXT: $(OUT_DIR)/libf3c-no-ext.o
-LIB_F3C_CORE: AVX SSE NO_EXT $(OUT_DIR)/libf3c-core.a
+CORE: $(OUT_DIR)/libf3c-core.o
+LIB_F3C_CORE: AVX SSE NO_EXT $(OUT_DIR)/libf3c.a
 
 TEST: $(OUT_DIR)/f3c-test.o
 
@@ -35,8 +36,10 @@ $(OUT_DIR)/libf3c-sse.o: c/sse/f3c-sse.c
 	$(CC) -c $(INC_CC) $(CC_FLAGS) -msse2 $< -o $@
 $(OUT_DIR)/libf3c-no-ext.o: c/f3c-no-ext.c
 	$(CC) -c $(INC_CC) $(CC_FLAGS) $< -o $@
+$(OUT_DIR)/libf3c-core.o: c/f3c-core.c
+	$(CC) -c $(INC_CC) $(CC_FLAGS) $< -o $@
 
-$(OUT_DIR)/libf3c-core.a: $(OUT_DIR)/libf3c-no-ext.o $(OUT_DIR)/libf3c-sse.o $(OUT_DIR)/libf3c-avx.o
+$(OUT_DIR)/libf3c.a: $(OUT_DIR)/libf3c-no-ext.o $(OUT_DIR)/libf3c-sse.o $(OUT_DIR)/libf3c-avx.o $(OUT_DIR)/libf3c-core.o
 	ar cr $@ $^
 
 $(OUT_DIR)/f3c-test.o: c/f3c-test.c

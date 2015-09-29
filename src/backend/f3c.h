@@ -4,10 +4,12 @@
 
 // Compile gcc -I/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/Headers/ -L/usr/local/Cellar/python3/3.4.2_1/Frameworks/Python.framework/Versions/3.4/lib/ -O3 -msse2 -mavx -shared -lpython3.4 -o f3c.so f3c.c
 
-static PyObject * f3c_mandelbrot ( PyObject *self, PyObject *args );
+static PyObject * f3c_mandelbrot               ( PyObject *self, PyObject *args );
+static PyObject * f3c_mandelbrot_random_sample ( PyObject *self, PyObject *args );
 
 static PyMethodDef moduleMethods[] = {
-    {"mandelbrot",  f3c_mandelbrot, METH_VARARGS, "Calculates the mandelbrot for a given set of points."},
+    {"mandelbrot"              ,  f3c_mandelbrot              , METH_VARARGS, "Calculates the mandelbrot for a given set of points."},
+    {"mandelbrot_random_sample",  f3c_mandelbrot_random_sample, METH_VARARGS, "Samples a point using random sampling."},
     {NULL, NULL, 0, NULL}        /* Sentinel */
 };
 

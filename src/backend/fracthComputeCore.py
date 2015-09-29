@@ -8,6 +8,24 @@ import cProfile
 
 import f3c
 
+def mandelbrot_random_sample(
+	num_sample_points,
+	center_x,
+	center_y,
+	ppw,
+	pph,
+	max_iter,
+	api ):
+	# if  isinstance(c, numbers.Number) \
+	# and isinstance(max_iter, numbers.Number):
+	
+	if api == "python":
+		return 0
+	if api == "c":
+		return f3c.mandelbrot_random_sample(num_sample_points, center_x, center_y, ppw, pph, max_iter)
+	else:
+		return None
+
 def mandelbrot(cList, max_iter, api):
 	# if  isinstance(c, numbers.Number) \
 	# and isinstance(max_iter, numbers.Number):
@@ -211,16 +229,18 @@ def random_sample_pixel( x, y, render_settings ):
 	pph = ppw
 
 	vp = coords_pixel_to_view(render_settings, (x, y))
-	vp = complex(vp[0], vp[1])
+	center_x = vp[0]
+	center_y = vp[1]
+	# vp = complex(vp[0], vp[1])
 
-	val = 0.0
-	zList = [None]*render_settings.num_sample_points
-	for i in range(render_settings.num_sample_points):
-		dx = ppw*(random.random()-0.5)
-		dy = pph*(random.random()-0.5)
-		zList[i] = complex( dx, dy ) + vp
-		# print vp, (vp[0]+dx, vp[1]+dy)
-	val = mandelbrot( zList, max_iter, render_settings.api )
+	# val = 0.0
+	# zList = [None]*render_settings.num_sample_points
+	# for i in range(render_settings.num_sample_points):
+	# 	dx = ppw*(random.random()-0.5)
+	# 	dy = pph*(random.random()-0.5)
+	# 	zList[i] = complex( dx, dy ) + vp
+	# 	# print vp, (vp[0]+dx, vp[1]+dy)
+	val = mandelbrot_random_sample( render_settings.num_sample_points, center_x, center_y, ppw, pph, max_iter, render_settings.api )
 
 	return val
 
@@ -273,9 +293,9 @@ def write_region(region_settings, direction):
 
 
 if __name__ == "__main__":
-	p = 11
+	p = 12
 	render_settings = RenderSettings()
-	render_settings.x            = 0
+	render_settings.x            = -0.75
 	render_settings.y            = 0
 	render_settings.zoom         = 0.25
 	render_settings.aspect_ratio = 1.0
